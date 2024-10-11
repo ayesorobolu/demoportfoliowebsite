@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <title>Portfolio website</title>
+</head>
+<style>
+  *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+font-family: "Gowun Batang", serif;
+ font-weight: 400;
+  font-style: normal;
+}
+
+.html{
+  scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+.logo {
+    color:#2844a7;
+    font-size: 32px;
+    margin-left: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: #0b0b0b;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color:#2844a7;
+}
+
+/* Burger Menu */
+.bar {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bar div {
+    width: 25px;
+    height: 3px;
+    background-color: #0d0c0c;
+    border-radius: 5px;
+}
+
+/* Burger Animation */
+.bar.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.bar.toggle .line2 {
+    opacity: 0;
+}
+
+.bar.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; 
+}
+
+nav li{
+  height: 50px;
+}
+
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+nav a:hover{
+  color: #2844a7;
+}
+
+nav li:first-child{
+  margin-right: auto;
+
+} */
+/* nav{
+background-color: aliceblue;
+height: 80px;
+width: 100%;
+position: fixed;
+top: 0;
+
+
+}
+
+label.logo{
+  color:#2844a7;
+  font-size: 35px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+nav ul{
+  float:right;
+  margin-right: 20px;
+ 
+}
+
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+  
+}
+
+nav ul li a{
+color: rgb(10, 9, 9);
+font-size: 17px;
+text-transform: uppercase;  
+padding: 7px 13px;
+border-radius: 3px;
+text-decoration: none;
+list-style: none;
+}
+
+a.active, a:hover{
+  color: #2844a7;
+  transition: .5s;
+}
+
+.checkbtn{
+  font-size: 30px ;
+  color: rgb(1, 0, 0);
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check{
+  display: none;
+} */
+
+#home{
+  margin-top: 50px;
+}
+
+#sec2col{
+ padding-left: 150px;
+ margin-bottom: 170px;
+}
+
+
+.skills-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.skills-list span{
+  font-size: 14px;
+  background-color:#2844a7;
+  color: rgb(255, 250, 250);
+  padding: 2px 10px;
+  border-radius: 5px;
+}
+
+/* .card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover{
+  color: white;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2844a7;
+  transition: bottom 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.card:hover::before {
+  bottom: 0;
+}
+
+.card-body {
+  position: relative;
+  z-index: 1;
+ 
+} */
+
+.contact-container {
+  width: 90%;
+  display: flex;
+  flex-direction:row;
+  padding: 20px;
+  margin-left: 40px;
+}
+
+.form-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+.error-message {
+  color: red;
+  margin: 5px 0 10px;
+  font-size: 0.9em;
+}
+
+button {
+  width: 30%;
+  padding: 10px;
+  background-color: #2844a7;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5565e0;
+}
+
+.form-container{
+  margin-bottom: 100px;
+}
+
+.contact-info {
+  flex: 0.5;
+  padding-top: 35px;
+  /* margin-left: 100px; */
+}
+
+.icon {
+  color: #4b72ff;
+}
+
+#footer-list:hover{
+ color: #2844a7;  
+
+}
+
+
+/* @media screen and (max-width: 900px) {
+.nav-menu.responsive{
+  left: 0;
+}
+
+.nav-menu{
+  position: fixed;
+  top: 80px;
+  left: 0%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(60, 123, 207, 0.7);
+  backdrop-filter: blur(20px);
+  width: 100%;
+  min-height: 450px;
+  height: 90vh;
+  transition: .3s;
+}
+
+.nav_menu_list{
+  flex-direction: column;
+}
+
+.nav-menu-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+} */
+
+/* For devices smaller than 1200px */
+@media (max-width: 1200px) {
+  /* nav {
+    padding-inline: 5vw;
+    height: 80px;
+    line-height: 80px;
+  }
+
+  .nav-name {
+    font-size: 28px;
+  } */
+
+  .container h2 {
+    font-size: 1.8rem;
+  }
+
+  .skills-list span {
+    font-size: 12px;
+  }
+}
+
+/* For tablets and medium-sized screens (below 900px) */
+@media (max-width: 900px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  /* .nav-logo {
+    padding-left: 10px;
+  }
+
+  .nav-name {
+    font-size: 24px;
+  }
+
+  .nav-menu {
+    padding-inline: 2vw;
+  }
+
+  .nav-menu-btn {
+    display: flex;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+  } */
+
+  .nav-links {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color:#2844a7;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+       
+    }
+
+    .logo{
+      margin-left: 0px;
+    }
+
+    .bar {
+        display: flex;
+       
+    }
+
+    .nav-active {
+        transform: translateX(0%);
+    }
+
+  .img-fluid {
+    height: 250px;
+    width: 250px;
+  }
+
+  #sec2col{
+ padding-left: 150px;
+ margin-bottom: 300px;
+}
+
+  .textname {
+    font-size: 2.5rem;
+  }
+
+  .lead {
+    font-size: 16px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+  .form-container {
+    margin-bottom: 50px;
+  }
+
+  .contact-info {
+    padding-top: 20px;
+  }
+
+  .icon-square, .icon-circle {
+    font-size: 1.8rem;
+  }
+}
+
+/* For mobile screens (below 600px) */
+@media (max-width: 600px) {
+  /* .nav-name {
+    font-size: 22px;
+  } */
+
+  .img-fluid {
+    height: 200px;
+    width: 200px;
+  }
+
+  #sec2col{
+ padding-left: 30px;
+ margin-bottom:30px;
+}
+
+  .textname {
+    font-size: 2rem;
+  }
+
+  .container h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-container {
+    padding: 0 15px;
+  }
+
+  .contact-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .contact-info p {
+    font-size: 0.9rem;
+  }
+
+  button {
+    width: 80%;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
+}
+
+/* For extra small mobile screens (below 400px) */
+@media (max-width: 400px) {
+  /* nav {
+    padding-inline: 2vw;
+  }
+
+  .nav-logo {
+    padding-left: 5px;
+  }
+
+  .nav-name {
+    font-size: 20px;
+  } */
+
+  .img-fluid {
+    height: 180px;
+    width: 180px;
+  }
+
+  .textname {
+    font-size: 1.8rem;
+  }
+
+  .lead {
+    font-size: 14px;
+  }
+
+  #sec2col{
+ padding-left: 30px;
+ margin-bottom: 30px;
+}
+
+  .skills-list span {
+    font-size: 10px;
+    padding: 1px 8px;
+  }
+
+  #card-list1{
+padding-right: 60px;
+  }
+
+  #card-list2{
+    padding-right: 40px;
+    padding-top: 35px;
+  }
+
+  .container h1 {
+    font-size: 1.4rem;
+  }
+
+  .contact-info{
+    margin-left: 25px;
+  }
+
+  .contact-info h3 {
+    font-size: 1rem;
+  }
+
+  .contact-info p {
+    font-size: 0.8rem;
+  }
+
+  button {
+    width: 90%;
+  }
+
+
+}
+
+
+</style>
+<body>
+
+  <div style="width: 100%; position: relative;">
+<!-- <nav id="header"> 
+  <div class="nav-logo">
+    <p class="nav-name">Dan</p>
+    <span>.</span>
+  </div>
+
+  <div class="nav-menu" id="myNavMenu">
+<ul class="nav_menu_list">
+  <li class="nav_list">
+    <a href="#Home" class="nav-link active-link">Home</a>
+    <div class="circle"></div>
+  </li>
+
+  <li class="nav_list">
+    <a href="#About" class="nav-link">About</a>
+    <div class="circle"></div>
+  </li>
+
+  <li class="nav_list">
+    <a href="#Projects" class="nav-link">Projects</a>
+    <div class="circle"></div>
+  </li>
+
+  <li class="nav_list">
+    <a href="#Contact" class="nav-link">Contact</a>
+    <div class="circle"></div>
+  </li>
+</ul>
+  </div>
+
+  <div class="nav-menu-btn">
+    <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+  </div>
+</nav> -->
+
+<!-- <nav>
+  <input type="checkbox" id="check">
+  <label for="check" class="checkbtn">
+    <i class="uil uil-bars"></i>
+  </label>
+
+  <label class="logo"> Dan.</label>
+  <ul>
+    <li><a href="" class="active">Home</a></li>
+    <li><a href="">About</a></li>
+    <li><a href="">Project</a></li>
+    <li><a href="">Contact</a></li>
+  </ul>
+</nav> -->
+
+<nav>
+  <div class="logo">Dan.</div>
+  <ul class="nav-links">
+      <li><a href="#Home">Home</a></li>
+      <li><a href="#About">About</a></li>
+      <li><a href="#Projects">Projects</a></li>
+      <li><a href="#Contact">Contact</a></li>
+  </ul>
+  <div class="bar">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+  </div>
+</nav>
+
+
+      <section id="Home" >
+        <div class="container col-xxl-8 px-4 py-5 mt-3" style="width: 100%;">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5" >
+              <div class="col-10 col-sm-8 col-lg-6" >
+                <img src="me2 copy.jpeg" class="d-block mx-lg-auto img-fluid rounded-circle image " alt="Bootstrap Themes"  loading="lazy" style="height: 300px; width: 300px;">
+              </div>
+              <div class="col-lg-6" >
+                <h3 class="lh-1 mb-3 txthello" >Hi, I am</h3>
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 textname">Ayesoro Daniel</h1>
+                <p class="lead textinfo">An experienced frontend developer with a passion for creating visually stunningand user-friendly websites.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start text-btn">
+                    <button type="button" class="" > <a href="./FALADE_SUNDAY_A. CV.pdf" target="_blank" style="text-decoration: none; color: white;">Download CV</a> <i class="bi bi-file-earmark-text"></i> </button>
+                 <button type="button" class="btn btn-outline-secondary btn-lg px-4"> <a href="#Contact" style="text-decoration: none; color: black;">Contact Me</a> </button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <section id="About" style="background-color: aliceblue; margin-top: 50px; ">
+        <div class="container" style=" left: 0; right: 0; width: 100%; position: relative;  ">
+          <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <h1 class="display-4 fw-normal text-body-emphasis">About Me</h1>
+          </div>
+            <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 " id="sec2row">
+              <div class="col d-flex flex-column align-items-start gap-2" >
+                <h2 class="">I am well-versed in HTML, CSS and JavaScript , and other cutting edge
+                  frameworks and libraries,which allows me to implement interactive features.
+                  Additionally, I have experirence working with content management systems (CMS) like
+                  WordPress.</h2>
+
+              </div>
+        
+
+              <div class="col" id="sec2col">
+                <div class="row row-cols-1 row-cols-sm-2">
+                  <div class=" d-flex flex-column gap-2">
+                    <h4 class="fw-semibold text-body-emphasis">Languages</h4>
+
+                    <div class="skills-list">
+                      <span>HTML</span>
+                      <span>CSS</span>
+                      <span>JAVASCRIPT</span>
+                      <span>BOOTSTRAP</span>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div>
+              <div class="container px-4 py-5" id="hanging-icons">
+                <h2 class="">My Qualification</h2>
+                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                  <div class="col d-flex align-items-start">
+                    <div class="icon-square  d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                      <i class="bi bi-mortarboard-fill " style="color: #2844a7;"></i>
+                    </div>
+                    <div>
+                      <h3 class="fs-2 text-body-emphasis">Education</h3>
+                      <p>Masters of Business Administration <br> Management <br> <i class="bi bi-calendar-check"></i> 2011-2014 </p>
+                      <p>Honours of Business Administration <br> Management <br> <i class="bi bi-calendar-check" ></i> 2009-2011 </p>
+                      <p>Secondary School Certificate <br> Business <br> <i class="bi bi-calendar-check"></i> 2005-2009 </p>
+                    </div>
+                  </div>
+
+                  <div class="col d-flex align-items-start">
+                    <div class="icon-square  d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                      <i class="bi bi-briefcase-fill" style="color: #2844a7;"></i> 
+                    </div>
+                    <div>
+                      <h3 class="fs-2 text-body-emphasis">Experience</h3>
+                      <p>Envato Themeforest multi national <br> Author <br> <i class="bi bi-calendar-check"></i> 2018-2024 </p>
+                      <p>Global IT international <br> Admin <br> <i class="bi bi-calendar-check"></i> 2014-2018 </p>
+                      <p>Instructory Global <br>Head of Business Department <br> <i class="bi bi-calendar-check"></i> 2011-2014 </p>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+          </div>
+      </section>
+
+      <section id="Projects" style="margin-top: 50px;">
+        <div class=" p-3 pb-md-4 mx-auto text-center">
+          <h1 class="display-4 fw-normal pb-2">Projects</h1>
+        </div>
+       
+        <div class="container px-4 py-5" id="custom-cards" >       
+            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+              <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('./pic1.jpg');background-size: cover; background-position: center;">
+                  <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                    <ul class="d-flex list-unstyled mt-auto" style="display: flex; justify-content: space-between; margin-right: 40px;" id="card-list">
+                      <li class="me-auto" id="card-list1">
+                        <h5 class="pt-5 mt-5 mb-4 display-8 lh-1 fw-bold">Completed</h5>
+                        <h1><i class="bi bi-briefcase-fill"></i></h1>
+                      </li>
+                      <li class="d-flex align-items-center me-3" id="card-list2">
+                        <small class="pt-3 fw-bold">30+ Finished Projects</small>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('./pic2.jpg'); background-size: cover; background-position: center;">
+                  <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                    <ul class="d-flex list-unstyled mt-auto" style="display: flex; justify-content: space-between; margin-right: 40px;" id="card-list">
+                      <li class="me-auto" id="card-list1">
+                        <h5 class="pt-5 mt-5 mb-4 display-8 lh-1 fw-bold">Clients</h5>
+                        <h1><i class="bi bi-people-fill"></i></h1>
+                      </li>
+                      <li class="d-flex align-items-center me-3" id="card-list2">
+                        <small class="pt-3 fw-bold">40+ Happy Clients</small>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('./pic3.jpg'); background-size: cover; background-position: center;">
+                  <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1 " >
+                    <ul class="d-flex list-unstyled mt-auto" style="display: flex; justify-content: space-between; margin-right: 40px;" id="card-list">
+                      <li class="me-auto" id="card-list1">
+                        <h5 class="pt-5 mt-5 mb-4 display-8 lh-1 fw-bold">Experience</h5>
+                        <h1 class=""><i class="bi bi-award-fill"></i></i></h1>
+                      </li>
+                      <li class="d-flex align-items-center me-3" id="card-list2">
+                        <small class="pt-3 fw-bold">10+ Years in the field</small>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+
+
+  <section id="Contact" style="background-color: aliceblue; margin-top: 50px;"> 
+    <div class=" p-3 pb-md-4 mx-auto text-center" style="width: 100%;">
+      <h1 class="display-4 fw-normal ">Contact Me</h1>
+    </div>
+
+    <div class="contact-container" >
+      <div class="form-container">
+              <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name" >
+                <p id="nameError" class="error-message"></p>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email" >
+                <p id="emailError" class="error-message"></p>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your message" rows="4"></textarea>
+                <p id="messageError" class="error-message"></p>
+    
+                <button type="submit">Submit</button>
+                <p id="formMessage"></p>
+            </form>
+      </div>
+      <div class="contact-info" >
+        <div class="col d-flex align-items-start">
+          <div class="icon-circle fs-4 me-3">
+            <i class="bi bi-telephone-fill" style="color: #2844a7;"></i>
+          </div>
+          <div>
+            <h3 class="fs-3 text-body-emphasis">Call Me</h3>
+            <p>08109917811 <br> 08101235312 <br> </p>
+          </div>
+        </div>
+
+        <div class="col d-flex align-items-start">
+          <div class="icon-square fs-4  me-3">
+            <i class="bi bi-briefcase-fill" style="color: #2844a7;"></i> 
+          </div>
+          <div>
+            <h3 class="fs-3 text-body-emphasis">E- mail</h3>
+            <p>abrahamayesoro@gmail.com <br>  </p>
+          </div>
+        </div>
+
+        <div class="col d-flex align-items-start">
+          <div class="icon-square fs-4  me-3">
+            <i class="bi bi-geo-alt-fill" style="color: #2844a7;"></i>
+          </div>
+          <div>
+            <h3 class="fs-3 text-body-emphasis">Location</h3>
+            <p>Road 10, House 6 Yomi Ajetunmobi Street <br> </p>
+          </div>
+        </div>
+        
+      </div>
+  </div>
+</section>
+
+
+
+      <div style="margin-top: 30px;">
+    <footer class="py-3 ">
+      <ul class="nav justify-content-center list-unstyled d-flex">
+        <li class="px-4" ><a class="text-body-secondary" href="#"> <i class="bi bi-facebook" id="footer-list" ></i></a></li>
+        <li class="px-4" ><a class="text-body-secondary" href="#"><i class="bi bi-linkedin" id="footer-list"></i></a></li>
+        <li class="px-4"><a class="text-body-secondary" href="#"><i class="bi bi-github" id="footer-list"></i></li>
+          <li class="px-4"><a class="text-body-secondary" href="#"><i class="bi bi-instagram" id="footer-list"></i></li>
+      </ul>
+      <br>
+      <h3 class="text-center">We provide the best website designs for all our clients</h3>
+      <p class="text-center ">Copyright @ Ayesoro Daniel. All right reserved.</p>
+    </footer>
+  </div>
+
+  </div>
+
+  <script>
+    AOS.init();
+  </script>
+  
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+</body>
+</html>
+

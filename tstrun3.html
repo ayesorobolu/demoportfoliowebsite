@@ -1,0 +1,345 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .form-group input:focus, 
+        .form-group textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+        .success {
+            color: green;
+            font-size: 14px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Contact Me</h1>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+                <div class="error" id="nameError"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email">
+                <div class="error" id="emailError"></div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" placeholder="Your Phone Number">
+                <div class="error" id="phoneError"></div>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your Message" rows="5"></textarea>
+                <div class="error" id="messageError"></div>
+            </div>
+            <button type="submit">Submit</button>
+            <div id="formFeedback"></div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Clear previous error messages
+            document.getElementById("nameError").innerText = "";
+            document.getElementById("emailError").innerText = "";
+            document.getElementById("phoneError").innerText = "";
+            document.getElementById("messageError").innerText = "";
+            document.getElementById("formFeedback").innerText = "";
+
+            // Get form values
+            var name = document.getElementById("name").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var phone = document.getElementById("phone").value.trim();
+            var message = document.getElementById("message").value.trim();
+
+            var isValid = true;
+
+            // Name validation
+            if (name === "") {
+                document.getElementById("nameError").innerText = "Name is required.";
+                isValid = false;
+            }
+
+            // Email validation
+            var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,6}$/i;
+            if (email === "") {
+                document.getElementById("emailError").innerText = "Email is required.";
+                isValid = false;
+            } else if (!emailPattern.test(email)) {
+                document.getElementById("emailError").innerText = "Enter a valid email address.";
+                isValid = false;
+            }
+
+            // Phone validation (allow only numbers)
+            var phonePattern = /^[0-9]+$/;
+            if (phone === "") {
+                document.getElementById("phoneError").innerText = "Phone number is required.";
+                isValid = false;
+            } else if (!phonePattern.test(phone)) {
+                document.getElementById("phoneError").innerText = "Phone number can contain only digits.";
+                isValid = false;
+            }
+
+            // Message validation
+            if (message === "") {
+                document.getElementById("messageError").innerText = "Message is required.";
+                isValid = false;
+            }
+
+            // If the form is valid, display success message
+            if (isValid) {
+                document.getElementById("formFeedback").innerText = "Form submitted successfully!";
+                document.getElementById("formFeedback").classList.add("success");
+
+                // Optionally: Clear the form after successful submission
+                document.getElementById("contactForm").reset();
+            }
+        });
+    </script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .form-group input:focus, 
+        .form-group textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+        .success {
+            color: green;
+            font-size: 14px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Contact Me</h1>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+                <div class="error" id="nameError"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email">
+                <div class="error" id="emailError"></div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" placeholder="Your Phone Number">
+                <div class="error" id="phoneError"></div>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your Message" rows="5"></textarea>
+                <div class="error" id="messageError"></div>
+            </div>
+            <button type="submit">Submit</button>
+            <div id="formFeedback"></div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Clear previous error messages
+            document.getElementById("nameError").innerText = "";
+            document.getElementById("emailError").innerText = "";
+            document.getElementById("phoneError").innerText = "";
+            document.getElementById("messageError").innerText = "";
+            document.getElementById("formFeedback").innerText = "";
+
+            // Get form values
+            var name = document.getElementById("name").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var phone = document.getElementById("phone").value.trim();
+            var message = document.getElementById("message").value.trim();
+
+            var isValid = true;
+
+            // Name validation
+            if (name === "") {
+                document.getElementById("nameError").innerText = "Name is required.";
+                isValid = false;
+            }
+
+            // Email validation
+            var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,6}$/i;
+            if (email === "") {
+                document.getElementById("emailError").innerText = "Email is required.";
+                isValid = false;
+            } else if (!emailPattern.test(email)) {
+                document.getElementById("emailError").innerText = "Enter a valid email address.";
+                isValid = false;
+            }
+
+            // Phone validation (allow only numbers)
+            var phonePattern = /^[0-9]+$/;
+            if (phone === "") {
+                document.getElementById("phoneError").innerText = "Phone number is required.";
+                isValid = false;
+            } else if (!phonePattern.test(phone)) {
+                document.getElementById("phoneError").innerText = "Phone number can contain only digits.";
+                isValid = false;
+            }
+
+            // Message validation
+            if (message === "") {
+                document.getElementById("messageError").innerText = "Message is required.";
+                isValid = false;
+            }
+
+            // If the form is valid, send the email using SMTP.js
+            if (isValid) {
+                // SMTP.js email sending code
+                Email.send({
+                    SecureToken: "678991b8-a205-4cd8-a620-cf8dba64ad91", // Add your SMTP token here
+                    To: 'abrahamayesoro@gmail.com', // Change this to your email
+                    From: 'abrahamayesoro@gmail.com', // Sender's email address
+                    Subject: `New Contact Form Submission from ${nameField.value.trim()}`,
+                    Body: `Name: ${name} <br> 
+                    Email: ${email} <br> 
+                    Phone: ${phone} <br> 
+                    Message: ${message}`
+                }).then(function(message) {
+                    Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Message has been sent successfully",
+                showConfirmButton: false,
+                timer: 1500
+              });
+                    // Optionally: Clear the form after successful submission
+                    document.getElementById("contactForm").reset();
+                }).catch(function(error) {
+                    document.getElementById("formFeedback").innerText = "There was an error sending the message.";
+                    document.getElementById("formFeedback").classList.add("error");
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
+
